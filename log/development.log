@@ -360,3 +360,8 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 18ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 4291)
 
 
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "owner"], ["email", "owner@gmail.com"], ["password_digest", "123"], ["role", "owner"], ["created_at", "2021-11-18 07:52:48.457386"], ["updated_at", "2021-11-18 07:52:48.457386"]]
+  [1m[36mTRANSACTION (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
