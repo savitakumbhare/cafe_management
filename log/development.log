@@ -21,3 +21,218 @@ Started GET "/todos" for ::1 at 2021-11-17 16:21:57 +0530
   
 ActionController::RoutingError (No route matches [GET] "/todos"):
   
+Started GET "/todos" for ::1 at 2021-11-18 09:29:13 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/cafe" for ::1 at 2021-11-18 09:29:15 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/cafe" for ::1 at 2021-11-18 09:33:50 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController
+Did you mean?  CafeContraller):
+  
+Started GET "/cafe" for ::1 at 2021-11-18 09:34:48 +0530
+Processing by CafeController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 43)
+Completed 200 OK in 18ms (Views: 12.8ms | Allocations: 1972)
+
+
+Started GET "/" for ::1 at 2021-11-18 09:35:19 +0530
+  
+AbstractController::ActionNotFound (The action 'home' could not be found for CafeController
+Did you mean?  index):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-11-18 09:35:35 +0530
+Processing by CafeController#home as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 42)
+Completed 200 OK in 3ms (Views: 2.1ms | Allocations: 648)
+
+
+Started GET "/" for ::1 at 2021-11-18 09:56:01 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/" for ::1 at 2021-11-18 09:57:32 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/rails/info/routes?path=/" for ::1 at 2021-11-18 09:57:40 +0530
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/"}
+Completed 200 OK in 4ms (Views: 0.6ms | Allocations: 2311)
+
+
+Started GET "/todos" for ::1 at 2021-11-18 10:01:42 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/" for ::1 at 2021-11-18 10:01:47 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/" for ::1 at 2021-11-18 10:02:19 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/" for ::1 at 2021-11-18 10:03:53 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/" for ::1 at 2021-11-18 10:04:40 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/" for ::1 at 2021-11-18 10:06:36 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.1ms | Allocations: 153)
+Completed 200 OK in 16ms (Views: 12.3ms | Allocations: 3072)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:10:24 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 44.8ms | Allocations: 4162)
+Completed 500 Internal Server Error in 54ms (Allocations: 5846)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cafe_owner_path' for #<ActionView::Base:0x000000000087c8>):
+     5: <h1 class = "Home-title"> Welcome to the Todo homepage </h1>
+     6: 
+     7: <h3 class = "Home-authenticate">
+     8:   Cafe Owner Login , <%= link_to "Sign in here", cafe_owner_path %>
+     9: </h3>
+    10: 
+    11: <h3 class = "Home-authenticate">
+  
+app/views/home/index.html.erb:8
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for ::1 at 2021-11-18 10:12:01 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.7ms | Allocations: 161)
+Completed 200 OK in 7ms (Views: 5.9ms | Allocations: 1883)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:13:03 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 484)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:13:05 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 3ms (Views: 1.8ms | Allocations: 442)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:13:25 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.2ms | Allocations: 36)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 436)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:13:35 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.0ms | Allocations: 378)
+Completed 200 OK in 18ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4301)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:18:15 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.0ms | Allocations: 161)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 1893)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:19:19 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.2ms | Allocations: 36)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 480)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:19:21 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 447)
+
+
+Started GET "/" for ::1 at 2021-11-18 10:19:33 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 444)
+
+
