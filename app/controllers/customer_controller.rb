@@ -1,6 +1,8 @@
 class CustomerController < ApplicationController
+  skip_before_action :ensure_user_logged_in
+
   def new
-    render "new"
+    render "customer/new"
   end
 
   def create
@@ -16,10 +18,17 @@ class CustomerController < ApplicationController
       redirect_to "customer/index"
     else
       flash[:error] = user.errors.full_messages.join(" ,  ")
-      redirect_to "/"
+      redirect_to new_customer_path
     end
   end
 
   def show
+  end
+
+  def login
+    email = params[:email]
+    password = params[:password]
+    user = User.find_by(email: email, password: password)
+    render plain: user.present?
   end
 end

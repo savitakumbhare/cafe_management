@@ -1,4 +1,6 @@
 class OwnerController < ApplicationController
+  skip_before_action :ensure_user_logged_in
+
   def create
     menu_category = params[:category]
     menu_category_id = MenuCategory.where(name: menu_category).ids.first.to_i
@@ -25,5 +27,12 @@ class OwnerController < ApplicationController
     menu_item = MenuItem.find(id)
     menu_item.destroy
     redirect_to owner_index_path
+  end
+
+  def login
+    email = params[:email]
+    password = params[:password]
+    user = User.find_by(email: email, password: password)
+    render plain: user.present?
   end
 end

@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_action :ensure_user_logged_in
+
   def new
   end
 
@@ -20,6 +22,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:current_user_id] = nil
     current_user = nil
-    #redirect_to "/"
+    redirect_to "/"
   end
 end
