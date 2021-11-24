@@ -1,7 +1,7 @@
 class OwnerController < ApplicationController
   def create
     menu_category = params[:category]
-    menu_category_id = MenuCategory.where(name: menu_category).ids
+    menu_category_id = MenuCategory.where(name: menu_category).ids.first
     menu_name = params[:name]
     menu_description = params[:description]
     menu_price = params[:price]

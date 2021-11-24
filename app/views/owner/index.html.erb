@@ -6,14 +6,14 @@
                 <ul>
                     <% MenuCategory.all.each do |menu| %>
                     <li style="list-style-type:none;">
-                      <%= radio_button_tag "category", "green" %>
+                      <%= radio_button_tag "category", menu.name %>
                       <%= menu.name %>
                     </li>
                     <% end %>
                 </ul>
                 <%= text_field_tag "name", nil, placeholder: "Add Name of Menu", autofocus: true %>
                 <%= text_field_tag "description", nil, placeholder: "Add Description" %>
-                <%= text_field_tag "price", nil, placeholder: "Add Price" %>
+                <%= number_field_tag "price", nil, placeholder: "Add Price" %>
                 <%= button_tag "Add" %>
           <% end %>
       </section>
