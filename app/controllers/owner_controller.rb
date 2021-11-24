@@ -1,7 +1,7 @@
 class OwnerController < ApplicationController
   def create
     menu_category = params[:category]
-    menu_category_id = MenuCategory.where(name: menu_category).ids.first
+    menu_category_id = MenuCategory.where(name: menu_category).ids.first.to_i
     menu_name = params[:name]
     menu_description = params[:description]
     menu_price = params[:price]
@@ -18,5 +18,12 @@ class OwnerController < ApplicationController
       flash[:error] = new_todo.errors.full_messages.join(" ,  ")
       redirect_to owner_index_path
     end
+  end
+
+  def destroy
+    id = params[:id]
+    menu_item = MenuItem.find(id)
+    menu_item.destroy
+    redirect_to owner_index_path
   end
 end

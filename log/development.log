@@ -5718,3 +5718,1361 @@ Completed 200 OK in 60ms (Views: 56.6ms | ActiveRecord: 1.4ms | Allocations: 105
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
   [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+Started POST "/owner" for ::1 at 2021-11-24 11:32:00 +0530
+Processing by OwnerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>"Breakfast", "name"=>"coffee", "description"=>"", "price"=>"30", "button"=>""}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  ↳ app/controllers/owner_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 11.9ms | Allocations: 5336)
+
+
+  
+NoMethodError (undefined method `t_i' for 1:Integer
+Did you mean?  to_i):
+  
+app/controllers/owner_controller.rb:4:in `create'
+Started GET "/owner" for ::1 at 2021-11-24 11:32:25 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 34.6ms | Allocations: 5373)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 8.6ms | Allocations: 1481)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 9.5ms | Allocations: 1478)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 6.9ms | Allocations: 1478)
+  Rendered owner/index.html.erb (Duration: 112.6ms | Allocations: 14499)
+Completed 200 OK in 118ms (Views: 92.7ms | ActiveRecord: 23.6ms | Allocations: 15314)
+
+
+Started POST "/owner" for ::1 at 2021-11-24 11:32:28 +0530
+Processing by OwnerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>"Breakfast", "name"=>"coffee", "description"=>"", "price"=>"30", "button"=>""}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  ↳ app/controllers/owner_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mMenuItem Create (1.8ms)[0m  [1m[32mINSERT INTO "menu_items" ("menu_category_id", "name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["menu_category_id", "1.0"], ["name", "coffee"], ["description", ""], ["price", "30.0"], ["created_at", "2021-11-24 06:02:28.406857"], ["updated_at", "2021-11-24 06:02:28.406857"]]
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (39.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 67ms (ActiveRecord: 42.3ms | Allocations: 3401)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 11:32:28 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (1.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (2.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 12.0ms | Allocations: 1750)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 9.7ms | Allocations: 1593)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 10.1ms | Allocations: 1593)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 7.8ms | Allocations: 1593)
+  Rendered owner/index.html.erb (Duration: 61.5ms | Allocations: 8399)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 4.7ms | Allocations: 8904)
+
+
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."name" = $1 /* loading for inspect */ LIMIT $2[0m  [["name", "milk"], ["LIMIT", 11]]
+  [1m[36mMenuItem Load (0.4ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."name" = $1[0m  [["name", "milk"]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."price" = $1[0m  [["price", "30.0"]]
+Started POST "/owner" for ::1 at 2021-11-24 11:36:12 +0530
+Processing by OwnerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>"Breakfast", "name"=>"sandwitch", "description"=>"", "price"=>"1000", "button"=>""}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  ↳ app/controllers/owner_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mMenuItem Create (1.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("menu_category_id", "name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["menu_category_id", "1.0"], ["name", "sandwitch"], ["description", ""], ["price", "1000.0"], ["created_at", "2021-11-24 06:06:12.603090"], ["updated_at", "2021-11-24 06:06:12.603090"]]
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 43ms (ActiveRecord: 22.4ms | Allocations: 3046)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 11:36:12 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.9ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 11.5ms | Allocations: 1876)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 8.6ms | Allocations: 1708)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 9.2ms | Allocations: 1708)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 8.5ms | Allocations: 1708)
+  Rendered owner/index.html.erb (Duration: 52.9ms | Allocations: 8863)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 1.9ms | Allocations: 9343)
+
+
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."price" = $1[0m  [["price", "1000.0"]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_category_id" = $1[0m  [["menu_category_id", "2.0"]]
+Started GET "/owner" for ::1 at 2021-11-24 11:44:49 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.9ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/index.html.erb (Duration: 45.1ms | Allocations: 5259)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 14.3ms | Allocations: 6861)
+
+
+  
+ActionView::Template::Error (Unsupported argument type: 1 (Integer)):
+    21:         <% MenuCategory.all.each do |menu| %>
+    22:           <%= render partial: "menu-category", locals: {
+    23:                        section_title: menu.name,
+    24:                        menuItem: MenuItem.where(menu_category_id = menu.id),
+    25:               
+    26:                      } %>
+    27:         <% end %>
+  
+app/views/owner/index.html.erb:24
+app/views/owner/index.html.erb:21
+Started GET "/" for ::1 at 2021-11-24 11:46:51 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.5ms | Allocations: 323)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 2157)
+
+
+Started GET "/" for ::1 at 2021-11-24 11:46:52 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.6ms | Allocations: 105)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 615)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 11:46:54 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 4.1ms | Allocations: 1417)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2668)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 11:46:58 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 523ms (ActiveRecord: 12.6ms | Allocations: 6199)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 11:46:59 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (3.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 12.6ms | Allocations: 2114)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 8.0ms | Allocations: 1708)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 9.0ms | Allocations: 1708)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 6.6ms | Allocations: 1708)
+  Rendered owner/index.html.erb (Duration: 54.4ms | Allocations: 10011)
+Completed 200 OK in 59ms (Views: 53.8ms | ActiveRecord: 3.7ms | Allocations: 11145)
+
+
+  [1m[36mMenuItem Destroy (16.9ms)[0m  [1m[31mDELETE FROM "menu_items"[0m
+Started GET "/owner" for ::1 at 2021-11-24 11:47:31 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.5ms | Allocations: 740)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.4ms | Allocations: 672)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.6ms | Allocations: 672)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.0ms | Allocations: 672)
+  Rendered owner/index.html.erb (Duration: 35.5ms | Allocations: 4787)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 1.4ms | Allocations: 5319)
+
+
+Started POST "/owner" for ::1 at 2021-11-24 11:47:45 +0530
+Processing by OwnerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>"Breakfast", "name"=>"poha", "description"=>"", "price"=>"20", "button"=>""}
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  ↳ app/controllers/owner_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mMenuItem Create (1.1ms)[0m  [1m[32mINSERT INTO "menu_items" ("menu_category_id", "name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["menu_category_id", "1.0"], ["name", "poha"], ["description", ""], ["price", "20.0"], ["created_at", "2021-11-24 06:17:45.276196"], ["updated_at", "2021-11-24 06:17:45.276196"]]
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (22.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 44ms (ActiveRecord: 24.5ms | Allocations: 3188)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 11:47:45 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (1.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 7.3ms | Allocations: 866)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 6.1ms | Allocations: 787)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.9ms | Allocations: 787)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.7ms | Allocations: 787)
+  Rendered owner/index.html.erb (Duration: 43.3ms | Allocations: 5258)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 2.4ms | Allocations: 5738)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 11:49:04 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 7.5ms | Allocations: 1064)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.7ms | Allocations: 786)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.5ms | Allocations: 786)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.6ms | Allocations: 786)
+  Rendered owner/index.html.erb (Duration: 41.1ms | Allocations: 5988)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 1.6ms | Allocations: 7630)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 11:49:18 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 8.0ms | Allocations: 1126)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 7.6ms | Allocations: 825)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 3.9ms | Allocations: 825)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.4ms | Allocations: 825)
+  Rendered owner/index.html.erb (Duration: 43.7ms | Allocations: 6166)
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 1.5ms | Allocations: 7853)
+
+
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_category_id" = $1[0m  [["menu_category_id", "1.0"]]
+Started GET "/owner" for ::1 at 2021-11-24 11:50:52 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 14.5ms | Allocations: 1136)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 3.1ms | Allocations: 825)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.7ms | Allocations: 825)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.1ms | Allocations: 825)
+  Rendered owner/index.html.erb (Duration: 42.7ms | Allocations: 6176)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 1.3ms | Allocations: 7870)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:00:32 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (1.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 6.8ms | Allocations: 1095)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.9ms | Allocations: 787)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.3ms | Allocations: 787)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 4.7ms | Allocations: 787)
+  Rendered owner/index.html.erb (Duration: 70.9ms | Allocations: 8154)
+Completed 200 OK in 82ms (Views: 80.4ms | ActiveRecord: 15.0ms | Allocations: 9847)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:01:06 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 19.6ms | Allocations: 4198)
+  Rendered owner/index.html.erb (Duration: 34.8ms | Allocations: 6595)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.4ms | Allocations: 8235)
+
+
+  
+ActionView::Template::Error (undefined method `category' for #<MenuItem id: 24, menu_category_id: 0.1e1, name: "poha", description: "", price: 0.2e2, created_at: "2021-11-24 06:17:45.276196000 +0000", updated_at: "2021-11-24 06:17:45.276196000 +0000">):
+     6:   <% MenuItem.all.each do |menu| %>
+     7:     <li>
+     8:       <label>
+     9:         <%= form_with(url: "/owner/#{menu.category}", method: "put") do %>
+    10:         <% menu.name %>
+    11:         <% end %>
+    12:       </label>
+  
+app/views/owner/_menu-category.html.erb:9
+app/views/owner/_menu-category.html.erb:6
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/owner" for ::1 at 2021-11-24 12:01:46 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (1.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 9.5ms | Allocations: 1079)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.5ms | Allocations: 790)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.7ms | Allocations: 790)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-category.html.erb:6
+  Rendered owner/_menu-category.html.erb (Duration: 5.4ms | Allocations: 790)
+  Rendered owner/index.html.erb (Duration: 45.3ms | Allocations: 6016)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 1.9ms | Allocations: 7718)
+
+
+Started POST "/owner" for ::1 at 2021-11-24 12:19:01 +0530
+Processing by OwnerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>"Drinks", "name"=>"coffee", "description"=>"", "price"=>"30", "button"=>""}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Drinks"]]
+  ↳ app/controllers/owner_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mMenuItem Create (4.3ms)[0m  [1m[32mINSERT INTO "menu_items" ("menu_category_id", "name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["menu_category_id", "2.0"], ["name", "coffee"], ["description", ""], ["price", "30.0"], ["created_at", "2021-11-24 06:49:01.085483"], ["updated_at", "2021-11-24 06:49:01.085483"]]
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (20.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 91ms (ActiveRecord: 39.6ms | Allocations: 5304)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:19:01 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/index.html.erb (Duration: 18.0ms | Allocations: 3877)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.7ms | Allocations: 5492)
+
+
+  
+ActionView::Template::Error (Missing partial owner/_menu-category, application/_menu-category with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/savita/cafe_management/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    19:       </section>
+    20:       <section>
+    21:         <% MenuCategory.all.each do |menuCat| %>
+    22:           <%= render partial: "menu-category", locals: {
+    23:                        section_title: menuCat.name,
+    24:                        menuItem: MenuItem.where(menu_category_id: menuCat.id),
+    25:               
+  
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/owner" for ::1 at 2021-11-24 12:21:14 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/index.html.erb (Duration: 17.5ms | Allocations: 3810)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms | Allocations: 5465)
+
+
+  
+ActionView::Template::Error (Missing partial owner/_menu-Category, application/_menu-Category with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/savita/cafe_management/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    19:       </section>
+    20:       <section>
+    21:         <% MenuCategory.all.each do |menuCat| %>
+    22:           <%= render partial: "menu-Category", locals: {
+    23:                        section_title: menuCat.name,
+    24:                        menuItem: MenuItem.where(menu_category_id: menuCat.id),
+    25:               
+  
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/" for ::1 at 2021-11-24 12:21:18 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.5ms | Allocations: 320)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 1486)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:21:19 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.6ms | Allocations: 105)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 617)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 12:21:21 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 4.5ms | Allocations: 1457)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 2576)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 12:21:25 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 470ms (ActiveRecord: 1.0ms | Allocations: 1058)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:21:26 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.4ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/index.html.erb (Duration: 8.0ms | Allocations: 2774)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 3235)
+
+
+  
+ActionView::Template::Error (Missing partial owner/_menu-Category, application/_menu-Category with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/savita/cafe_management/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+    19:       </section>
+    20:       <section>
+    21:         <% MenuCategory.all.each do |menuCat| %>
+    22:           <%= render partial: "menu-Category", locals: {
+    23:                        section_title: menuCat.name,
+    24:                        menuItem: MenuItem.where(menu_category_id: menuCat.id),
+    25:               
+  
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/signin" for ::1 at 2021-11-24 12:21:52 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.3ms | Allocations: 1455)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3194)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 12:21:55 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 469ms (ActiveRecord: 0.8ms | Allocations: 1056)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:21:55 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.1ms | Allocations: 1267)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.6ms | Allocations: 936)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.2ms | Allocations: 936)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.8ms | Allocations: 936)
+  Rendered owner/index.html.erb (Duration: 44.3ms | Allocations: 6830)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 1.8ms | Allocations: 7929)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:25:01 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 7.4ms | Allocations: 1207)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.4ms | Allocations: 908)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.0ms | Allocations: 908)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.5ms | Allocations: 908)
+  Rendered owner/index.html.erb (Duration: 41.9ms | Allocations: 6684)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 1.5ms | Allocations: 8371)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:28:23 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 101.0ms | Allocations: 12460)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.0ms | Allocations: 1589)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 7.0ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.5ms | Allocations: 1588)
+  Rendered owner/index.html.erb (Duration: 150.3ms | Allocations: 19979)
+Completed 200 OK in 159ms (Views: 155.4ms | ActiveRecord: 1.6ms | Allocations: 21666)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:29:16 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (2.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/_menu-Category.html.erb (Duration: 2.8ms | Allocations: 1372)
+  Rendered owner/index.html.erb (Duration: 20.5ms | Allocations: 3836)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.1ms | Allocations: 5491)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section>
+  <div >
+    <p><%= section_title %></p>
+  </div>
+ <ul>
+  <% MenuItem.all.each do |menu| %>
+    <li>
+      <label>
+        <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+        <% menu.name %>
+        <a class="TodoItem-delete" href="javascript:void(0)" >
+          <%= image_submit_tag("trashcan.svg") %>
+        <% end %>
+        </a>
+        <% end %>
+      </label>
+    </li>
+  <% end %>
+</ul>
+</section>
+
+):
+1:    <section>
+2:      <div >
+3:        <p><%= section_title %></p>
+4:      </div>
+5:     <ul>
+6:      <% MenuItem.all.each do |menu| %>
+7:        <li>
+8:          <label>
+9:            <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+10:            <% menu.name %>
+11:            <a class="TodoItem-delete" href="javascript:void(0)" >
+12:              <%= image_submit_tag("trashcan.svg") %>
+13:            <% end %>
+14:            </a>
+15:            <% end %>
+16:          </label>
+17:        </li>
+18:      <% end %>
+19:    </ul>
+20:    </section>
+  
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/owner" for ::1 at 2021-11-24 12:29:39 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (2.2ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/_menu-Category.html.erb (Duration: 3.3ms | Allocations: 1359)
+  Rendered owner/index.html.erb (Duration: 21.9ms | Allocations: 3820)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.2ms | Allocations: 5476)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section>
+  <div >
+    <p><%= section_title %></p>
+  </div>
+ <ul>
+  <% MenuItem.all.each do |menu| %>
+    <li>
+      <label>
+        <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+        <% menu.name %>
+        <a href="javascript:void(0)" >
+          <%= image_submit_tag("trashcan.svg") %>
+        <% end %>
+        </a>
+        <% end %>
+      </label>
+    </li>
+  <% end %>
+</ul>
+</section>
+
+):
+1:    <section>
+2:      <div >
+3:        <p><%= section_title %></p>
+4:      </div>
+5:     <ul>
+6:      <% MenuItem.all.each do |menu| %>
+7:        <li>
+8:          <label>
+9:            <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+10:            <% menu.name %>
+11:            <a href="javascript:void(0)" >
+12:              <%= image_submit_tag("trashcan.svg") %>
+13:            <% end %>
+14:            </a>
+15:            <% end %>
+16:          </label>
+17:        </li>
+18:      <% end %>
+19:    </ul>
+20:    </section>
+  
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/" for ::1 at 2021-11-24 12:29:43 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.3ms | Allocations: 320)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 1486)
+
+
+Started GET "/" for ::1 at 2021-11-24 12:29:43 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.6ms | Allocations: 105)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 616)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 12:29:45 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.9ms | Allocations: 1454)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 2574)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 12:29:50 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 475ms (ActiveRecord: 0.8ms | Allocations: 1053)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:29:51 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.8ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  Rendered owner/_menu-Category.html.erb (Duration: 4.3ms | Allocations: 1341)
+  Rendered owner/index.html.erb (Duration: 15.9ms | Allocations: 3136)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms | Allocations: 3598)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section>
+  <div >
+    <p><%= section_title %></p>
+  </div>
+ <ul>
+  <% MenuItem.all.each do |menu| %>
+    <li>
+      <label>
+        <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+        <% menu.name %>
+        <a href="javascript:void(0)" >
+          <%= image_submit_tag("trashcan.svg") %>
+        <% end %>
+        </a>
+        <% end %>
+      </label>
+    </li>
+  <% end %>
+</ul>
+</section>
+
+):
+1:    <section>
+2:      <div >
+3:        <p><%= section_title %></p>
+4:      </div>
+5:     <ul>
+6:      <% MenuItem.all.each do |menu| %>
+7:        <li>
+8:          <label>
+9:            <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+10:            <% menu.name %>
+11:            <a href="javascript:void(0)" >
+12:              <%= image_submit_tag("trashcan.svg") %>
+13:            <% end %>
+14:            </a>
+15:            <% end %>
+16:          </label>
+17:        </li>
+18:      <% end %>
+19:    </ul>
+20:    </section>
+  
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/_menu-Category.html.erb:23: syntax error, unexpected `end', expecting end-of-input
+app/views/owner/index.html.erb:22
+app/views/owner/index.html.erb:21
+Started GET "/signin" for ::1 at 2021-11-24 12:30:12 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.9ms | Allocations: 1456)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 3196)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 12:30:16 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 483ms (ActiveRecord: 0.8ms | Allocations: 1068)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:30:16 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.9ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 12.5ms | Allocations: 2348)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 9.4ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 7.4ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 7.8ms | Allocations: 1588)
+  Rendered owner/index.html.erb (Duration: 57.2ms | Allocations: 9865)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 1.8ms | Allocations: 10964)
+
+
+Started DELETE "/owner/1.0" for ::1 at 2021-11-24 12:30:19 +0530
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for OwnerController
+Did you mean?  create):
+  
+actionpack (6.1.4.1) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4.1) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.3) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/owner" for ::1 at 2021-11-24 12:32:05 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.4ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 27.9ms | Allocations: 4909)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.9ms | Allocations: 1589)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 9.0ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.6ms | Allocations: 1588)
+  Rendered owner/index.html.erb (Duration: 101.9ms | Allocations: 15449)
+Completed 200 OK in 107ms (Views: 84.1ms | ActiveRecord: 21.1ms | Allocations: 16264)
+
+
+Started DELETE "/owner/1.0" for ::1 at 2021-11-24 12:32:07 +0530
+Processing by OwnerController#destroy as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "x"=>"17", "y"=>"17", "id"=>"1"}
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/owner_controller.rb:25:in `destroy'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.6ms | Allocations: 1457)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MenuItem with 'id'=1):
+  
+app/controllers/owner_controller.rb:25:in `destroy'
+Started GET "/owner" for ::1 at 2021-11-24 12:33:48 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 27.7ms | Allocations: 4909)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.7ms | Allocations: 1589)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 10.3ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 7.0ms | Allocations: 1588)
+  Rendered owner/index.html.erb (Duration: 102.7ms | Allocations: 15349)
+Completed 200 OK in 108ms (Views: 86.5ms | ActiveRecord: 18.1ms | Allocations: 16164)
+
+
+Started DELETE "/owner/1.0" for ::1 at 2021-11-24 12:33:50 +0530
+Processing by OwnerController#destroy as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "x"=>"15", "y"=>"9", "id"=>"1"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 780)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MenuItem without an ID):
+  
+app/controllers/owner_controller.rb:25:in `destroy'
+Started GET "/owner" for ::1 at 2021-11-24 12:34:01 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 11.7ms | Allocations: 1963)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 9.6ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.8ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.2ms | Allocations: 1588)
+  Rendered owner/index.html.erb (Duration: 57.4ms | Allocations: 8765)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 1.6ms | Allocations: 9262)
+
+
+Started DELETE "/owner/1.0" for ::1 at 2021-11-24 12:36:00 +0530
+Processing by OwnerController#destroy as */*
+  Parameters: {"authenticity_token"=>"[FILTERED]", "x"=>"12", "y"=>"15", "id"=>"1"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 675)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find MenuItem without an ID):
+  
+app/controllers/owner_controller.rb:25:in `destroy'
+Started GET "/" for ::1 at 2021-11-24 12:39:43 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 4.3ms | Allocations: 324)
+Completed 200 OK in 13ms (Views: 11.7ms | Allocations: 2087)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 12:39:46 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.5ms | Allocations: 1439)
+Completed 200 OK in 9ms (Views: 7.3ms | Allocations: 2611)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 12:39:58 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 539ms (ActiveRecord: 17.3ms | Allocations: 8498)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:39:59 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.9ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (1.4ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 25.8ms | Allocations: 5195)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 7.2ms | Allocations: 1596)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 4.7ms | Allocations: 1588)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 4.9ms | Allocations: 1588)
+  Rendered owner/index.html.erb (Duration: 90.9ms | Allocations: 15351)
+Completed 200 OK in 97ms (Views: 92.6ms | ActiveRecord: 2.4ms | Allocations: 16528)
+
+
+Started DELETE "/owner/24" for ::1 at 2021-11-24 12:40:07 +0530
+Processing by OwnerController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "x"=>"16", "y"=>"9", "id"=>"24"}
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/owner_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:26:in `destroy'
+  [1m[36mMenuItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/owner_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:26:in `destroy'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 32ms (ActiveRecord: 14.5ms | Allocations: 2980)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:40:07 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.5ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 10.3ms | Allocations: 1489)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.9ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.0ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.5ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 42.8ms | Allocations: 6918)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 1.5ms | Allocations: 7423)
+
+
+Started DELETE "/owner/25" for ::1 at 2021-11-24 12:40:11 +0530
+Processing by OwnerController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "x"=>"12", "y"=>"13", "id"=>"25"}
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/owner_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:26:in `destroy'
+  [1m[36mMenuItem Destroy (0.7ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/owner_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:26:in `destroy'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 21ms (ActiveRecord: 5.7ms | Allocations: 2618)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:40:11 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.4ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 3.4ms | Allocations: 740)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 3.8ms | Allocations: 672)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 3.9ms | Allocations: 672)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.4ms | Allocations: 672)
+  Rendered owner/index.html.erb (Duration: 29.0ms | Allocations: 4787)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 1.0ms | Allocations: 5267)
+
+
+Started POST "/owner" for ::1 at 2021-11-24 12:40:52 +0530
+Processing by OwnerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>"Breakfast", "name"=>"Dosa", "description"=>"", "price"=>"90", "button"=>""}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "menu_categories"."id" FROM "menu_categories" WHERE "menu_categories"."name" = $1[0m  [["name", "Breakfast"]]
+  ↳ app/controllers/owner_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mMenuItem Create (0.9ms)[0m  [1m[32mINSERT INTO "menu_items" ("menu_category_id", "name", "description", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["menu_category_id", "1.0"], ["name", "Dosa"], ["description", ""], ["price", "90.0"], ["created_at", "2021-11-24 07:10:53.084089"], ["updated_at", "2021-11-24 07:10:53.084089"]]
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owner_controller.rb:15:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 65ms (ActiveRecord: 31.7ms | Allocations: 8153)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:40:53 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.5ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 10.3ms | Allocations: 1928)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.0ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.9ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.1ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 55.8ms | Allocations: 9649)
+Completed 200 OK in 75ms (Views: 72.3ms | ActiveRecord: 1.3ms | Allocations: 11359)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:41:21 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 11.5ms | Allocations: 1869)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.5ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.5ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.4ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 50.1ms | Allocations: 8018)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 1.5ms | Allocations: 9706)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:41:23 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.2ms | Allocations: 1489)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.1ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.7ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.4ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 44.4ms | Allocations: 6910)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 1.7ms | Allocations: 7442)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:41:24 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.5ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (2.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 10.0ms | Allocations: 1489)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.9ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 4.7ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.3ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 38.7ms | Allocations: 6910)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 2.8ms | Allocations: 7390)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:41:47 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 10.0ms | Allocations: 1869)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.0ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.8ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.3ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 41.9ms | Allocations: 8012)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 1.8ms | Allocations: 9659)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:41:48 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.5ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.1ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 43.0ms | Allocations: 1490)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 10.2ms | Allocations: 1135)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 4.7ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.7ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 130.3ms | Allocations: 6918)
+Completed 200 OK in 146ms (Views: 129.9ms | ActiveRecord: 1.4ms | Allocations: 7451)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:42:16 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.6ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 8.4ms | Allocations: 1882)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.1ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.3ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 3.6ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 41.7ms | Allocations: 8031)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.3ms | Allocations: 9676)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 12:42:49 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.9ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:21
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 9.5ms | Allocations: 1869)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.0ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.1ms | Allocations: 1130)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 5.2ms | Allocations: 1130)
+  Rendered owner/index.html.erb (Duration: 43.5ms | Allocations: 8012)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.6ms | Allocations: 9700)
+
+

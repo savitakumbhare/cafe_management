@@ -1,0 +1,21 @@
+<section>
+  <div >
+    <p><%= section_title %></p>
+  </div>
+ <ul>
+  <% MenuItem.all.each do |menu| %>
+    <li>
+      <article>
+        <%= form_with(url: "/owner/#{menu.menu_category_id}", method: "put") do %>
+        <% menu.name %>
+        <% end %>
+        <a  href="javascript:void(0)" >
+          <%= form_with(url: "/owner/#{menu.id}", method: "delete") do %>
+            <%= image_submit_tag("trashcan.svg") %>
+          <% end %>
+        </a>
+      </article>
+    </li>
+  <% end %>
+</ul>
+</section>

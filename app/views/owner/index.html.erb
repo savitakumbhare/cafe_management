@@ -4,10 +4,10 @@
         <h5>Add Menu Item </h5>
             <%= form_with(url: "/owner", method: "post") do %>
                 <ul>
-                    <% MenuCategory.all.each do |menu| %>
+                    <% MenuCategory.all.each do |menuCat| %>
                     <li style="list-style-type:none;">
-                      <%= radio_button_tag "category", menu.name %>
-                      <%= menu.name %>
+                      <%= radio_button_tag "category", menuCat.name %>
+                      <%= menuCat.name %>
                     </li>
                     <% end %>
                 </ul>
@@ -18,9 +18,10 @@
           <% end %>
       </section>
       <section>
-        <% MenuCategory.all.each do |menu| %>
-          <%= render partial: "menu-category", locals: {
-                       section_title: menu.name,
+        <% MenuCategory.all.each do |menuCat| %>
+          <%= render partial: "menu-Category", locals: {
+                       section_title: menuCat.name,
+                       menuItem: MenuItem.where(menu_category_id: menuCat.id),
               
                      } %>
         <% end %>
