@@ -1,0 +1,22 @@
+<main class="CafePageMain">
+      <article>
+        <h1 class="Cafepage-title">My Menu list</h1>
+        <form>
+        <%= form_with(url: "/menus", method: "post", class: "AddMenu") do %>
+          <% radio_button_tag "Menu Category", "Breakfast" %>
+          <% radio_button_tag "Menu Category", "Lunch/Dinner" %>
+          <%= text_field_tag "Menu Name ", nil, placeholder: "Add menu", class: "AddItem-text" %>
+          <%= text_field_tag "Description", nil, placeholder: "Add Discription", class: "AddItem-text" %>
+          <%= text_field_tag "Price", nil, placeholder: "Add Price", class: "AddItem-text" %>
+          <%= button_tag "Add", class: "AddTodo-button" %>
+        <% end %>
+        </form>
+        <%= render partial: "todo-section", locals: {
+                     section_title: "Overdue",
+                     todos: @todos.overdue,
+                     show_due_date: true,
+                   } %>
+
+
+      </article>
+    </main>
