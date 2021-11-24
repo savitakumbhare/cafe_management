@@ -13,14 +13,13 @@ class CustomerController < ApplicationController
     )
     if user.save
       session[:current_user_id] = user.id
-      redirect_to "users/owner"
+      redirect_to "customer/index"
     else
       flash[:error] = user.errors.full_messages.join(" ,  ")
-      render "users/new"
+      redirect_to "/"
     end
   end
 
   def show
-    render "customer"
   end
 end

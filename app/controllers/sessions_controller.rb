@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       if user.role == "owner"
         redirect_to "/owner"
       else
-        redirect_to "/custormer"
+        redirect_to "/customer"
       end
     else
       flash[:error] = "Your login attempt was invalid! Please enter valid user ID, Password!!"

@@ -7076,3 +7076,866 @@ Processing by OwnerController#index as HTML
 Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.6ms | Allocations: 9700)
 
 
+Started GET "/" for ::1 at 2021-11-24 13:24:38 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.6ms | Allocations: 324)
+Completed 200 OK in 9ms (Views: 7.4ms | Allocations: 2082)
+
+
+Started GET "/" for ::1 at 2021-11-24 13:24:38 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.5ms | Allocations: 105)
+Completed 200 OK in 3ms (Views: 1.7ms | Allocations: 544)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 13:24:40 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 4.3ms | Allocations: 1439)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 2611)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:24:50 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/owner
+Completed 302 Found in 538ms (ActiveRecord: 23.0ms | Allocations: 8502)
+
+
+Started GET "/owner" for ::1 at 2021-11-24 13:24:50 +0530
+Processing by OwnerController#index as HTML
+  Rendering owner/index.html.erb
+  [1m[36mMenuCategory Load (0.7ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:7
+  [1m[36mCACHE MenuCategory Load (0.0ms)[0m  [1m[34mSELECT "menu_categories".* FROM "menu_categories"[0m
+  ↳ app/views/owner/index.html.erb:24
+  [1m[36mMenuItem Load (1.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 34.4ms | Allocations: 4752)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 4.7ms | Allocations: 1135)
+  [1m[36mCACHE MenuItem Load (0.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.1ms | Allocations: 1134)
+  [1m[36mCACHE MenuItem Load (0.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items"[0m
+  ↳ app/views/owner/_menu-Category.html.erb:6
+  Rendered owner/_menu-Category.html.erb (Duration: 6.1ms | Allocations: 1134)
+  Rendered owner/index.html.erb (Duration: 78.8ms | Allocations: 13542)
+Completed 200 OK in 86ms (Views: 80.6ms | ActiveRecord: 2.0ms | Allocations: 14716)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 13:24:56 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.0ms | Allocations: 1149)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 1696)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:25:13 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/custormer
+Completed 302 Found in 468ms (ActiveRecord: 0.7ms | Allocations: 951)
+
+
+Started GET "/custormer" for ::1 at 2021-11-24 13:25:14 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/signin" for ::1 at 2021-11-24 13:26:34 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.3ms | Allocations: 1454)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 3210)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:26:37 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/custormer
+Completed 302 Found in 465ms (ActiveRecord: 0.6ms | Allocations: 1052)
+
+
+Started GET "/custormer" for ::1 at 2021-11-24 13:26:38 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/custormer" for ::1 at 2021-11-24 13:30:01 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/signin" for ::1 at 2021-11-24 13:30:04 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.6ms | Allocations: 1455)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3206)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:30:08 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/custormer
+Completed 302 Found in 474ms (ActiveRecord: 0.9ms | Allocations: 1055)
+
+
+Started GET "/custormer" for ::1 at 2021-11-24 13:30:08 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/signin" for ::1 at 2021-11-24 13:31:28 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.5ms | Allocations: 1215)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2039)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:31:31 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/custormer
+Completed 302 Found in 500ms (ActiveRecord: 8.3ms | Allocations: 6351)
+
+
+Started GET "/custormer" for ::1 at 2021-11-24 13:31:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/signin" for ::1 at 2021-11-24 13:32:10 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.2ms | Allocations: 1215)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2039)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:32:13 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/custormer
+Completed 302 Found in 516ms (ActiveRecord: 8.6ms | Allocations: 6311)
+
+
+Started GET "/custormer" for ::1 at 2021-11-24 13:32:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/signin" for ::1 at 2021-11-24 13:33:53 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.6ms | Allocations: 1422)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3308)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:33:56 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/custormer
+Completed 302 Found in 525ms (ActiveRecord: 8.2ms | Allocations: 6307)
+
+
+Started GET "/custormer" for ::1 at 2021-11-24 13:33:56 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/custormer"):
+  
+Started GET "/signin" for ::1 at 2021-11-24 13:36:45 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.1ms | Allocations: 1215)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2039)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 13:36:49 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/customer
+Completed 302 Found in 526ms (ActiveRecord: 8.3ms | Allocations: 6370)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 13:36:50 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 1.0ms | Allocations: 146)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1336)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 13:38:41 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.2ms | Allocations: 1176)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1708)
+
+
+Started GET "/" for ::1 at 2021-11-24 13:38:46 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.4ms | Allocations: 324)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 1528)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 13:38:48 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 20.7ms | Allocations: 4326)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 4928)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<ActionView::Base:0x00000000034be8>):
+    1: <p class = "NewUsers-title"> Welcome new user! </p>
+    2: <section class = "UsersNew" >
+    3:   <%= form_with url: users_path do |form| %>
+    4:     <div  class= "Form-section">
+    5:       <p class = " FormInput-label" > First Name: </p>
+    6:       <%= form.text_field :first_name, class: "Form_input", autofocus: true %>
+  
+app/views/customer/new.html.erb:3
+app/controllers/customer_controller.rb:3:in `new'
+Started GET "/" for ::1 at 2021-11-24 13:41:06 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 2.1ms | Allocations: 323)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 2059)
+
+
+Started GET "/cafe" for ::1 at 2021-11-24 13:41:08 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/cafe/routes" for ::1 at 2021-11-24 13:41:13 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/" for ::1 at 2021-11-24 13:41:51 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 2.7ms | Allocations: 328)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 2084)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 13:41:52 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 20.7ms | Allocations: 4349)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 5466)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<ActionView::Base:0x000000000359a8>):
+    1: <p class = "NewUsers-title"> Register Here! </p>
+    2: <section class = "UsersNew" >
+    3:   <%= form_with url: users_path do |form| %>
+    4:     <div  class= "Form-section">
+    5:       <p class = " FormInput-label" > First Name: </p>
+    6:       <%= form.text_field :first_name, class: "Form_input", autofocus: true %>
+  
+app/views/customer/new.html.erb:3
+app/controllers/customer_controller.rb:3:in `new'
+Started GET "/customer/new" for ::1 at 2021-11-24 13:42:14 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 6.5ms | Allocations: 2326)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 4153)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 13:42:41 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/customer/new" for ::1 at 2021-11-24 13:43:49 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 5.2ms | Allocations: 2009)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 2800)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 13:43:52 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/" for ::1 at 2021-11-24 13:44:07 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.6ms | Allocations: 323)
+Completed 200 OK in 12ms (Views: 10.5ms | Allocations: 1525)
+
+
+Started GET "/cafe/routes" for ::1 at 2021-11-24 13:44:14 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/rails/info/routes?path=/customer/new" for ::1 at 2021-11-24 13:44:56 +0530
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"/customer/new"}
+Completed 200 OK in 5ms (Views: 0.4ms | Allocations: 2403)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 13:45:51 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 5.1ms | Allocations: 2261)
+Completed 200 OK in 14ms (Views: 12.7ms | Allocations: 4095)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 13:45:55 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/" for ::1 at 2021-11-24 14:29:22 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 2.2ms | Allocations: 617)
+Completed 200 OK in 27ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 4651)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:29:23 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.7ms | Allocations: 123)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 685)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:29:25 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 0.8ms | Allocations: 145)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 1341)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:29:28 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.6ms | Allocations: 121)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 640)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:29:30 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 519)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:29:38 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.5ms | Allocations: 106)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 568)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:31:28 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 0.7ms | Allocations: 140)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 1791)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:31:30 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 0.2ms | Allocations: 36)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 568)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:31:31 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.4ms | Allocations: 320)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 1432)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:31:33 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.5ms | Allocations: 105)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 616)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 14:31:35 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 6.5ms | Allocations: 1861)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3128)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 14:31:41 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"savi.lonare@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "savi.lonare@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/customer
+Completed 302 Found in 506ms (ActiveRecord: 10.7ms | Allocations: 8299)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:31:42 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 0.3ms | Allocations: 39)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 598)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 14:32:04 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 1.9ms | Allocations: 1173)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1653)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:32:06 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.6ms | Allocations: 108)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 568)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:32:08 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 3.7ms | Allocations: 2253)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2854)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 14:32:23 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/customer/new" for ::1 at 2021-11-24 14:36:26 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:36:28 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.2ms | Allocations: 170)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 971)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 14:36:29 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 2.3ms | Allocations: 1214)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2029)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:36:31 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.3ms | Allocations: 108)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 619)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:36:32 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 2.7ms | Allocations: 2006)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 14:36:43 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/customer/new" for ::1 at 2021-11-24 14:37:44 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:37:45 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.9ms | Allocations: 170)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 972)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:37:47 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 2.9ms | Allocations: 2007)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 14:37:56 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/customer/new" for ::1 at 2021-11-24 14:39:02 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:39:03 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.7ms | Allocations: 170)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 971)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:39:05 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 2.6ms | Allocations: 2007)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started POST "/customer/new" for ::1 at 2021-11-24 14:39:13 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/customer/new"):
+  
+Started GET "/customer/new" for ::1 at 2021-11-24 14:40:27 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 4.9ms | Allocations: 2292)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 4045)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:40:43 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"aa", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Create (15.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "role", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "aaa"], ["last_name", "aa"], ["email", "aaa@gmail.com"], ["password_digest", "$2a$12$scwpaG8Pijs5CO3dkDA4y.zpoZR0lJ2ZuGBBVsIC8Nle9HJkoF196"], ["role", "customer"], ["created_at", "2021-11-24 09:10:44.481450"], ["updated_at", "2021-11-24 09:10:44.481450"]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 568ms (ActiveRecord: 44.3ms | Allocations: 12430)
+
+
+  
+ActionView::MissingTemplate (Missing template /customer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/savita/cafe_management/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+  
+app/controllers/customer_controller.rb:16:in `create'
+Started GET "/customer/new" for ::1 at 2021-11-24 14:41:47 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:41:48 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.5ms | Allocations: 323)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1541)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:41:49 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 4.3ms | Allocations: 2007)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2799)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:42:00 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 585ms (ActiveRecord: 9.3ms | Allocations: 13044)
+
+
+  
+NoMethodError (undefined method `empty?' for nil:NilClass):
+  
+app/controllers/customer_controller.rb:19:in `create'
+Started GET "/" for ::1 at 2021-11-24 14:43:03 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/customer/new" for ::1 at 2021-11-24 14:43:30 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:43:34 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.5ms | Allocations: 170)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 971)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:43:36 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 3.5ms | Allocations: 2007)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:43:44 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 522ms (ActiveRecord: 10.5ms | Allocations: 10174)
+
+
+  
+ActionView::MissingTemplate (Missing template customer/new_customer, application/new_customer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/savita/cafe_management/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actiontext-6.1.4.1/app/views"
+  * "/home/savita/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/actionmailbox-6.1.4.1/app/views"
+):
+  
+app/controllers/customer_controller.rb:19:in `create'
+Started GET "/" for ::1 at 2021-11-24 14:44:50 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:44:55 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.8ms | Allocations: 170)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 971)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:44:57 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 4.7ms | Allocations: 2007)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:45:05 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"Savita", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+No template found for CustomerController#create, rendering head :no_content
+Completed 204 No Content in 516ms (ActiveRecord: 8.1ms | Allocations: 10432)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:46:10 +0530
+  
+ArgumentError (Invalid route name, already in use: 'new_customer' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for ::1 at 2021-11-24 14:46:32 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.6ms | Allocations: 170)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 980)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:46:32 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.5ms | Allocations: 105)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 623)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:46:35 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 3.8ms | Allocations: 2007)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2806)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:46:45 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Redirected to http://localhost:3000/customer
+Completed 302 Found in 523ms (ActiveRecord: 10.4ms | Allocations: 10826)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:46:46 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 1.2ms | Allocations: 123)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 782)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:46:57 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 3.3ms | Allocations: 1962)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 2429)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:47:47 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.9ms | Allocations: 170)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 978)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:47:48 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 5.2ms | Allocations: 2006)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 2805)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:47:58 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Redirected to http://localhost:3000/customer/new
+Completed 302 Found in 535ms (ActiveRecord: 9.6ms | Allocations: 9100)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:47:58 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 2.7ms | Allocations: 1965)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2511)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:48:28 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.8ms | Allocations: 170)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 979)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:48:28 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 0.6ms | Allocations: 105)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 623)
+
+
+Started GET "/customer/new" for ::1 at 2021-11-24 14:48:30 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 3.2ms | Allocations: 2007)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2806)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:48:37 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Redirected to http://localhost:3000/cafe
+Completed 302 Found in 534ms (ActiveRecord: 9.8ms | Allocations: 9159)
+
+
+Started GET "/cafe" for ::1 at 2021-11-24 14:48:37 +0530
+  
+ActionController::RoutingError (uninitialized constant CafeController):
+  
+Started GET "/customer/new" for ::1 at 2021-11-24 14:49:24 +0530
+Processing by CustomerController#new as HTML
+  Rendering customer/new.html.erb
+  Rendered customer/new.html.erb (Duration: 2.9ms | Allocations: 2008)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2816)
+
+
+Started POST "/customer" for ::1 at 2021-11-24 14:49:29 +0530
+Processing by CustomerController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "first_name"=>"aaa", "last_name"=>"", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-up!"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/customer_controller.rb:14:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 520ms (ActiveRecord: 8.2ms | Allocations: 9147)
+
+
+Started GET "/" for ::1 at 2021-11-24 14:49:30 +0530
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 1.0ms | Allocations: 169)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 969)
+
+
+Started GET "/signin" for ::1 at 2021-11-24 14:49:32 +0530
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb
+  Rendered sessions/new.html.erb (Duration: 3.1ms | Allocations: 1416)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 2667)
+
+
+Started POST "/signin" for ::1 at 2021-11-24 14:49:39 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"aaa@gmail.com", "password"=>"[FILTERED]", "commit"=>"Sign-in!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aaa@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/customer
+Completed 302 Found in 490ms (ActiveRecord: 0.7ms | Allocations: 1290)
+
+
+Started GET "/customer" for ::1 at 2021-11-24 14:49:39 +0530
+Processing by CustomerController#index as HTML
+  Rendering customer/index.html.erb
+  Rendered customer/index.html.erb (Duration: 0.2ms | Allocations: 37)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 540)
+
+

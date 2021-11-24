@@ -18,6 +18,9 @@
           <% end %>
       </section>
       <section>
+
+      </section>
+      <section>
         <% MenuCategory.all.each do |menuCat| %>
           <%= render partial: "menu-Category", locals: {
                        section_title: menuCat.name,
