@@ -1,32 +1,42 @@
-
 <article>
       <section>
-        <h5>Add Menu Item </h5>
-            <%= form_with(url: "/owner", method: "post") do %>
+          <div>
+                <a  href="javascript:void(0)" class = "List-anchor"> Check Orders
+                <%= image_submit_tag("list.svg") %>
+                <%= form_with(url: "owner/index", method: "get") do %>
+                </a>
+                <% end %>
+          </div>
+          <h1 class = "Menu-home"> Add Menu Item </h1>
+          <h2 class ="Menu-section"> Select Menu Category </h2>
+          <%= form_with(url: "/owner", method: "post") do %>
                 <ul>
                     <% MenuCategory.all.each do |menuCat| %>
-                    <li style="list-style-type:none;">
+                    <li style="list-style-type:none;" class = "Menu-label">
                       <%= radio_button_tag "category", menuCat.name %>
                       <%= menuCat.name %>
                     </li>
                     <% end %>
                 </ul>
-                <%= text_field_tag "name", nil, placeholder: "Add Name of Menu", autofocus: true %>
-                <%= text_field_tag "description", nil, placeholder: "Add Description" %>
-                <%= number_field_tag "price", nil, placeholder: "Add Price" %>
-                <%= button_tag "Add" %>
-          <% end %>
-      </section>
-      <section>
 
-      </section>
-      <section>
-        <% MenuCategory.all.each do |menuCat| %>
-          <%= render partial: "menu-Category", locals: {
-                       section_title: menuCat.name,
-                       menuItem: MenuItem.where(menu_category_id: menuCat.id),
-              
-                     } %>
-        <% end %>
+                <h2 class ="Menu-section"> Enter Menu Details </h2>
+                <article class = Menu-label>
+                  Menu Item:
+                  <%= text_field_tag "name", nil, placeholder: "Add Name of Menu", autofocus: true %>
+                </article>
+                <article class = Menu-label>
+                   Description:
+                  <%= text_field_tag "description", nil, placeholder: "Add Description" %>
+                </article>
+                <article class = Menu-label>
+                    Price:
+                    <%= number_field_tag "price", nil, placeholder: "Add Price" %>
+                </article>
+                <article>
+                    <%= button_tag "Add Menu", class: "Cafe-button" %>
+                    <%= button_tag "Show Menus", class: "Cafe-button" %>
+
+                </article>
+            <% end %>
       </section>
 </article>

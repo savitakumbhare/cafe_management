@@ -1,6 +1,4 @@
 class OwnerController < ApplicationController
-  skip_before_action :ensure_user_logged_in
-
   def create
     menu_category = params[:category]
     menu_category_id = MenuCategory.where(name: menu_category).ids.first.to_i
@@ -17,7 +15,7 @@ class OwnerController < ApplicationController
     if new_menu.save
       redirect_to owner_index_path
     else
-      flash[:error] = new_todo.errors.full_messages.join(" ,  ")
+      flash[:error] = new_menu.errors.full_messages.join(" ,  ")
       redirect_to owner_index_path
     end
   end
@@ -34,5 +32,9 @@ class OwnerController < ApplicationController
     password = params[:password]
     user = User.find_by(email: email, password: password)
     render plain: user.present?
+  end
+
+  def orders
+    render plaintext "here"
   end
 end

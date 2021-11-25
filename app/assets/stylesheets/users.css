@@ -20,3 +20,38 @@
   border: 0;
   border-radius: 8px;
 }
+.Menu-section {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(21, 22, 22);
+}
+.Menu-home {
+  margin-top: 20px;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: rgb(53, 53, 56);
+}
+.Menu-label {
+  padding: 5px;
+  font-size: 15px;
+  margin-bottom: 3px;
+  color: rgb(21, 22, 22);
+  display: flex;
+}
+.Cafe-button {
+  background-color: #4bbb78;
+  border: 1px solid transparent;
+  color: white;
+  padding: 8px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.List-anchor {
+  padding: 10px;
+  display: inline-flex;
+}

@@ -1,6 +1,4 @@
 class CustomerController < ApplicationController
-  skip_before_action :ensure_user_logged_in
-
   def new
     render "customer/new"
   end
@@ -15,7 +13,7 @@ class CustomerController < ApplicationController
     )
     if user.save
       session[:current_user_id] = user.id
-      redirect_to "customer/index"
+      redirect_to "/"
     else
       flash[:error] = user.errors.full_messages.join(" ,  ")
       redirect_to new_customer_path
