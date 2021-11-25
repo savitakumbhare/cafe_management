@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   resources :cafe
   resources :owner
   resources :customer
+  resources :menu
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
   delete "/signout" => "sessions#destroy", as: :destroy_session
-  get "/owner" => "owner#show", as: :show_orders
+  get "/owner/orders" => "owner#show", as: :show_orders
 end
