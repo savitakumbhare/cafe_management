@@ -1,0 +1,25 @@
+.Menu-catTitle {
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: left;
+  color: green;
+}
+.Menu-li {
+  font-size: 20px;
+  margin-top: 20px;
+  color: rgb(0, 9, 128);
+  display: flex;
+}
+.Menu-ListTitle {
+  font-size: 40px;
+  margin-top: 20px;
+  color: darkslategray;
+}
+.Menu-ItemCount {
+  font-size: 10px;
+  color: blueviolet;
+  text-align: top;
+}
+.Menu-update {
+  display: inline;
+}

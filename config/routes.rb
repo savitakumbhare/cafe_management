@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get "/" => "home#index"
+  get "/" => "cafe#index"
+
   resources :cafe
-  resources :owner
-  resources :customer
+  resources :users
   resources :menu
+  resources :order
+
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
+
+  get "/sessions/customer" => "sessions#customer", as: :customer_session
+  get "/sessions/owner" => "sessions#owner", as: :owner_session
+
   delete "/signout" => "sessions#destroy", as: :destroy_session
-  get "/owner/orders" => "owner#show", as: :show_orders
+  post "/cafe/new" => "cafe#new", as: :new_cafe_path
+  delete "/menu/show/:id" => "menu#destroy", as: :destroy_menuItem
+
+  post "/sessions/customer/:id" => "order#new", as: :add_OrderItem
 end

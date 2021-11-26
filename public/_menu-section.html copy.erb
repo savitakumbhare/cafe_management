@@ -1,0 +1,24 @@
+<ul>
+    <li class = "Menu-catTitle">
+     <%= section_title %> </li>
+        <% MenuItem.all.each do |menu| %>
+        <% if menu.menu_category_id == cat_id %>
+          <div class="Menu-update">
+            <li class = "Menu-li">
+            <%= menu.name %>
+            <%= menu.price %> INR
+            <a href="javascript:void(0)">
+              <%= form_with(url: "/customer#{menu.id}", method: "patch") do %>
+                 <input type="image" src = "../../plus-box.svg"/> </a>
+              <% end %>
+
+            <a href="javascript:void(0)">
+              <%= form_with(url: "/customer#{menu.id}", method: "patch") do %>
+                 <input type="image" src = "../../minus-box.svg"/> </a>
+              <% end %>
+            </li>
+          </div>
+      <% end %>
+
+    <% end %>
+  </ul>

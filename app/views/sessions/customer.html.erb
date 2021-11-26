@@ -1,0 +1,13 @@
+
+<main>
+  <article>
+      <h1 class= "Menu-ListTitle"> Menu List </h1>
+      <% MenuCategory.all.each do |menuCat| %>
+    <%= render partial: "menu-section", locals: {
+                 section_title: menuCat.name,
+                 cat_id: menuCat.id,
+               } %>
+<% end %>
+  </article>
+
+</main>

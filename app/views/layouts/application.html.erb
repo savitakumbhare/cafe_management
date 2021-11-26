@@ -11,7 +11,8 @@
     </head>
 
   <body >
-   <% if @current_user %>
+  <h1> Welcome to Cafe App </h1>
+  <% if @current_user %>
     <p class = "UserHeader">
       Welcome <%= @current_user.first_name %>!
       <%= link_to "Sign-out", destroy_session_path, method: "delete" %>

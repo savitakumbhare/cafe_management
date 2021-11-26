@@ -14,16 +14,22 @@
   margin-bottom: 8px;
 }
 .Form-submit {
-  font-size: 20px;
-  padding: 20px;
-  background-color: #0ea86d20;
-  border: 0;
-  border-radius: 8px;
+  background-color: #4bbb78;
+  border: 1px solid transparent;
+  padding: 8px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
+
 .Menu-section {
   font-size: 20px;
-  margin-bottom: 10px;
-  color: rgb(21, 22, 22);
+  margin-top: auto;
+  color: rgb(13, 116, 116);
 }
 .Menu-home {
   margin-top: 20px;

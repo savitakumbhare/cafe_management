@@ -7,9 +7,13 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
       if user.role == "owner"
-        redirect_to "/menu"
+        redirect_to "/sessions/owner"
       else
-        redirect_to "/customer"
+        Order.create(
+          date: Date.today,
+          user_id: user.id,
+        )
+        redirect_to "/sessions/customer"
       end
     else
       flash[:error] = "Your login attempt was invalid! Please enter valid user ID, Password!!"

@@ -15,6 +15,16 @@
  */
 body {
   font-family: sans-serif;
-  max-width: 300px;
+  max-width: 700px;
   margin: 0 auto;
+  text-align: center;
+}
+h1 {
+  font-size: 40;
+}
+h2 {
+  font-size: 30;
+}
+h3 {
+  font-size: 20;
 }

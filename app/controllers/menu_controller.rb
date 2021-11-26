@@ -28,10 +28,10 @@ class MenuController < ApplicationController
     id = params[:id]
     menu_item = MenuItem.find(id)
     menu_item.destroy
-    redirect_to menu_index_path
+    render "menu/show"
   end
 
   def show
-    redirect_to owner_index_path
+    render "menu/show"
   end
 end
