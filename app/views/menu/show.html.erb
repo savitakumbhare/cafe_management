@@ -1,6 +1,6 @@
 <main>
   <%= link_to "Back", "/sessions/owner", class: "Owner-back" %>
-  <h1 class= ""> Menu List </h1>
+  <h1 class= "Menu-ListTitle"> Menu List </h1>
   <% MenuCategory.all.each do |menuCat| %>
     <%= render partial: "menu-section", locals: {
                  section_title: menuCat.name,

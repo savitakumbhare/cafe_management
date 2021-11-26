@@ -1,21 +1,22 @@
 <ul>
     <li class = "Menu-categoryLable">
      <%= section_title %> </li>
-    <li>
-     <h3 class = "Menu_header" > Menu Item
-     <h3 class = "Menu_header" > Rate
+    <li class = "Menu_header" >
+      Menu Item
+      Rate
      </li>
      <% MenuItem.all.each do |menu| %>
         <% if menu.menu_category_id == cat_id %>
-            <li class = "Menu-td">
+            <li class = "Menu_header">
+            <label class="Item-container" >
             <%= menu.name %>
-            <%= menu.price %>
+            <%= menu.price %> INR
             <a href="javascript:void(0)">
               <%= form_with(url: "/menu/show/#{menu.id}", method: "delete") do %>
-                 <input type="image" src = "../../trashcan.svg"/> </a>
-              <% end %>
+                 <input type="image" src = "../../trashcan.svg"/>
+              <% end %> </a>
             </li>
-            </article>
+
       <% end %>
 
     <% end %>
