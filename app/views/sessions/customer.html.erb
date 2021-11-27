@@ -1,13 +1,24 @@
- <%= link_to "Sign Out! ", "/", class: "Owner-back" %>
-<main>
-  <article>
-      <h1 class= "Menu-ListTitle"> Menu List </h1>
-      <% MenuCategory.all.each do |menuCat| %>
-    <%= render partial: "menu-section", locals: {
-                 section_title: menuCat.name,
-                 cat_id: menuCat.id,
-               } %>
+<h1> Welcome to Cafe App </h1>
+<% if @current_user %>
+  <p class = "UserHeader">
+    Welcome <%= @current_user.first_name %>!
+    <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+  </p>
 <% end %>
-  </article>
+<main>
+<article>
+  <h1 class= "Menu-ListTitle"> Menu List
+  <a href="javascript:void(0)" class = "Cart-icon">
+    <%= form_with(url: "/sessions/customer/", method: "get") do %>
+      <input type="image" src = "../../cart.svg"/> </a>
+    <% end %>
 
+  </h1>
+    <% MenuCategory.all.each do |menuCat| %>
+      <%= render partial: "menu-section", locals: {
+                   section_title: menuCat.name,
+                   cat_id: menuCat.id,
+                 } %>
+    <% end %>
+</article>
 </main>

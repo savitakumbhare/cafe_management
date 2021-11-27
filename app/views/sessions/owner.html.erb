@@ -1,4 +1,10 @@
-
+<h1> Welcome to Cafe App </h1>
+<% if @current_user %>
+  <p class = "UserHeader">
+    Welcome <%= @current_user.first_name %>!
+    <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+  </p>
+<% end %>
 <%= link_to "Owner Home", "/sessions/owner", class: "Owner-menu" %>
 <%= link_to "Create Menu", "/menu", class: "Owner-menu" %>
 <%= link_to "Display Menu", "/menu/show", class: "Owner-menu" %>

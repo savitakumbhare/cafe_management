@@ -3,9 +3,8 @@ Rails.application.routes.draw do
   get "/" => "cafe#index"
 
   resources :cafe
-  resources :users
   resources :menu
-  resources :order
+  resources :orders
 
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
