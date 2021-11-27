@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get "/sessions/owner" => "sessions#owner", as: :owner_session
 
   delete "/signout" => "sessions#destroy", as: :destroy_session
-  post "/cafe/new" => "cafe#new", as: :new_cafe_path
+  post "/cafe/new" => "cafe#create", as: :new_cafe_path
   delete "/menu/show/:id" => "menu#destroy", as: :destroy_menuItem
 
   post "/sessions/customer/:id" => "order#new", as: :add_OrderItem

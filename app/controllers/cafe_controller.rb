@@ -18,7 +18,7 @@ class CafeController < ApplicationController
       redirect_to "/"
     else
       flash[:error] = user.errors.full_messages.join(" ,  ")
-      redirect_to
+      redirect_to "/cafe/new"
     end
   end
 end
