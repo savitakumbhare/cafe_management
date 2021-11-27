@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :cafe
   resources :menu
-  resources :orders
+  resources :order
 
   get "/signin" => "sessions#new", as: :new_sessions
   post "/signin" => "sessions#create", as: :sessions
@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   delete "/signout" => "sessions#destroy", as: :destroy_session
   post "/cafe/new" => "cafe#create", as: :new_cafe_path
   delete "/menu/show/:id" => "menu#destroy", as: :destroy_menuItem
-
   post "/sessions/customer/:id" => "order#new", as: :add_OrderItem
+  get "/orders/custview" => "order#show", as: :"order_show"
 end

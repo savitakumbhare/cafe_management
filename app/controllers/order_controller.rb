@@ -19,5 +19,6 @@ class OrderController < ApplicationController
   end
 
   def show
+    render "/order/custview"
   end
 end

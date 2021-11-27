@@ -7,13 +7,10 @@
 <% end %>
 <main>
 <article>
-  <h1 class= "Menu-ListTitle"> Menu List
-  <a href="javascript:void(0)" class = "Cart-icon">
-    <%= form_with(url: "/sessions/customer/", method: "get") do %>
-      <input type="image" src = "../../cart.svg"/> </a>
-    <% end %>
+  <h1 class= "Menu-ListTitle"> Menu List </h1>
+  <%= link_to image_tag("/../../cart.svg"), "/order/custview" %>
 
-  </h1>
+
     <% MenuCategory.all.each do |menuCat| %>
       <%= render partial: "menu-section", locals: {
                    section_title: menuCat.name,
