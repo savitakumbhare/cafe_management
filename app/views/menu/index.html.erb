@@ -6,10 +6,8 @@
                 <ul>
                     <% MenuCategory.all.each do |menuCat| %>
                     <li style="list-style-type:none;" class = "Owner-menu-title">
-                     here
                       <%= radio_button_tag "category", menuCat.name %>
                       <%= menuCat.name %>
-
                     </li>
                     <% end %>
                 </ul>
