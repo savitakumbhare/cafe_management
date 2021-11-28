@@ -1,0 +1,26 @@
+<h1 class= "Menu-ListTitle"> Orders </h1>
+<% if @current_user %>
+  <p class = "UserHeader">
+    Welcome <%= @current_user.first_name %>!
+    <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+  </p>
+<% end %>
+<%= link_to "Owner Home", "/sessions/owner", class: "Owner-menu" %>
+<%= link_to "Create Menu", "/menu", class: "Owner-menu" %>
+<%= link_to "Display Menu", "/menu/show", class: "Owner-menu" %>
+<%= link_to "Pending Orders", "/owner/orderplaced", class: "Owner-menu" %>
+ <%= link_to "Sign Out!", "/", class: "Owner-menu-title" %>
+<br>
+
+
+<main>
+<article>
+    <% Order.all.each do |cartRow| %>
+      <%= render partial: "order-section", locals: {
+                   order_id: cartRow.id,
+                   user_id: cartRow.user_id,
+                   date: cartRow.created_at,
+                 } %>
+    <% end %>
+</article>
+</main>

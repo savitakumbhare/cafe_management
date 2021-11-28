@@ -1,16 +1,14 @@
  <%= link_to "Back", "/", class: "Owner-back" %>
-<p class = "NewUsers-title"> Sign-in!</p>
-<section class = "UsersNew" >
-  <%= form_with url: new_sessions_path do |form| %>
-    <div  class= "Form-section">
-      <p class = " FormInput-label"> Email:
-      <%= form.email_field :email, class: "Form_input", autofocus: true %> </p>
-     </div>
-    <div  class= "Form-section">
-      <p class = " FormInput-label"> Password:
-      <%= form.password_field :password, class: "Form_input" %> </p>
-     </div>
-     <div class = "Form-section">
-      <%= form.submit "Sign-in!", class: "Form-submit" %>
-  <% end %>
-</section>
+ <h1 class= "Menu-ListTitle">Sign In!</h1><br><br>
+
+
+<center>
+
+<%= form_with url: new_sessions_path do |form| %>
+<table>
+    <tr style="height:40px;"><td>Email</td><td> <%= form.email_field :email, class: "Form_input", autofocus: true %></td></tr>
+     <tr style="height:40px;"><td>Password</td><td>  <%= form.password_field :password, class: "Form_input" %></td></tr>
+     <tr style="height:40px;"><td>&nbsp;</td><td>  <%= form.submit "Sign-in!", class: "Form-submit" %></td></tr>
+</table>
+<% end %>
+<center>

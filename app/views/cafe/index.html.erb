@@ -1,13 +1,7 @@
-<h1 class = "Home-title"> Welcome to the Cafe Login Page </h1>
 
-<h3 class = "Home-authenticate">
-  Cafe Owner Login <%= link_to "sign-in here", new_sessions_path %>
-</h3>
-
-<h3 class = "Home-authenticate">
-  If you are a new user <%= link_to "Sign up here", new_cafe_path %>
-</h3>
-
-<h3 class = "Home-authenticate">
-  If you are an existing user <%= link_to "sign-in here", new_sessions_path %>
-</h3>
+ <h1 class= "Menu-ListTitle"> Welcome to the Cafe</h1><br><br>
+<p>Cafe Owner <br><%= link_to "Login", new_sessions_path %></p>
+<br><br>
+<p>Existing User <br> <%= link_to "Login", new_sessions_path %></p>
+<br><br>
+<p>New User? <br><%= link_to "Sign Up Here", new_cafe_path %></p>

@@ -1,0 +1,29 @@
+<br>
+<center>
+<table width="100%">
+
+    <tr style="height:40px;color: #fff; background: #838a85;">
+    <td colspan="4" style="vertical-align: middle;"><p><b>Order No: <%= order_id %> </b> <br> Date: <%= date.strftime("%d-%m-%Y %T") %>  </p></td></tr>
+    <% $total = 0 %>
+     <% OrderItem.all.each do |oItem| %>
+        <% if oItem.order_id == order_id %>
+
+        <% $total = $total + oItem.menu_item_price %>
+            <tr style="border-bottom: 1px solid #ddd;">
+            <td width="70%"><%= oItem.menu_item_name %></td>
+            <td width="15%">&#8377;<%= oItem.menu_item_price %></td>
+            <td width="15%"><a href="javascript:void(0)">
+              <%= form_with(url: "/orders/delete/#{oItem.id}", method: "post") do %>
+                 <input type="image" src = "../../trashcan.svg"/> </a>
+              </td>
+              </tr>
+             <% end %>
+
+      <% end %>
+
+
+    <% end %>
+<tr><td colspan="3">&nbsp;</td></tr>
+<tr><td></td><td>Total</td><td>&#8377; <%= $total %></td></tr>
+  </table>
+  </center>

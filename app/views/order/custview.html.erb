@@ -1,1 +1,27 @@
-<h3> Your Cart Items </h3>
+<h1 class= "Menu-ListTitle"> My Cart </h1>
+
+<br>
+
+
+<% if session[:current_user_name] %>
+  <p class = "UserHeader">
+    This is your cart <%= session[:current_user_name] %>
+   <a href="http://localhost:3000/sessions/customer">Go to menu list</a>   <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+  </p>
+<% end %>
+
+<main>
+<article>
+
+
+
+
+    <% Order.where(:user_id => session[:current_user_id]).each do |cartRow| %>
+      <%= render partial: "cart-section", locals: {
+                   order_id: cartRow.id,
+                   user_id: cartRow.user_id,
+                   date: cartRow.created_at,
+                 } %>
+    <% end %>
+</article>
+</main>

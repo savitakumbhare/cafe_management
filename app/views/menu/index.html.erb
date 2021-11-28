@@ -1,5 +1,16 @@
+<% if @current_user %>
+  <p class = "UserHeader">
+    Welcome <%= @current_user.first_name %>!
+    <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+  </p>
+<% end %>
+<%= link_to "Owner Home", "/sessions/owner", class: "Owner-menu" %>
+<%= link_to "Create Menu", "/menu", class: "Owner-menu" %>
+<%= link_to "Display Menu", "/menu/show", class: "Owner-menu" %>
+<%= link_to "Pending Orders", "/owner/orderplaced", class: "Owner-menu" %>
+ <%= link_to "Sign Out!", "/", class: "Owner-menu-title" %>
 <article>
-          <%= link_to "Back", "/sessions/owner", class: "Owner-back" %>
+
           <h1 class = "Menu-home"> Add Menu Item </h1>
           <h2 class ="Menu-section"> Select Menu Category </h2>
           <%= form_with(url: "/menu", method: "post") do %>

@@ -17,4 +17,6 @@ Rails.application.routes.draw do
   delete "/menu/show/:id" => "menu#destroy", as: :destroy_menuItem
   post "/sessions/customer/:id" => "order#new", as: :add_OrderItem
   get "/orders/custview" => "order#show", as: :"order_show"
+  post "/orders/delete/:id" => "order#delete", as: :"order_delete"
+  get "/owner/orderplaced" => "menu#orders", as: :"order_pending"
 end

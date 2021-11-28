@@ -17,7 +17,7 @@ class MenuController < ApplicationController
     )
     if new_menu.save
       flash[:notice] = "Menu added sucessfully !"
-      redirect_to menu_index_path
+      render "menu/show"
     else
       flash[:error] = new_menu.errors.full_messages.join(" ,  ")
       redirect_to menu_index_path
@@ -33,5 +33,9 @@ class MenuController < ApplicationController
 
   def show
     render "menu/show"
+  end
+
+  def orders
+    render "owner/orderplaced"
   end
 end

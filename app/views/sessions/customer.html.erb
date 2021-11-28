@@ -1,14 +1,15 @@
-<h1> Welcome to Cafe App </h1>
-<% if @current_user %>
+
+<% if session[:current_user_name] %>
   <p class = "UserHeader">
-    Welcome <%= @current_user.first_name %>!
-    <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+    Welcome <%= session[:current_user_name] %>
+    <%= link_to "Sign-out", destroy_session_path, method: "delete" %>  <%= link_to image_tag("/../../cart.svg"), "/order/custview" %>
   </p>
 <% end %>
+
 <main>
 <article>
   <h1 class= "Menu-ListTitle"> Menu List </h1>
-  <%= link_to image_tag("/../../cart.svg"), "/order/custview" %>
+
 
 
     <% MenuCategory.all.each do |menuCat| %>

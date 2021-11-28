@@ -1,4 +1,4 @@
-<ul>
+<!--<ul>
     <li class = "Menu-categoryLable">
      <%= section_title %> </li>
     <li class = "Menu_header" >
@@ -19,4 +19,35 @@
       <% end %>
 
     <% end %>
-  </ul>
+  </ul>-->
+
+
+  <center>
+<table width="100%">
+
+
+
+    <tr style="height:20px;color: #fff; background: #838a85;" ><td colspan="3" style="vertical-align: middle;"><p> <%= section_title %></p></td></tr>
+
+     <% MenuItem.all.each do |menu| %>
+         <% if menu.menu_category_id == cat_id %>
+
+
+            <tr style="border-bottom: 1px solid #ddd;height:40px;">
+            <td style="width:70%"> <%= menu.name %></td>
+            <td style="width:15%">&#8377;<%= menu.price %></td>
+            <td style="width:15%"><a href="javascript:void(0)">
+              <%= form_with(url: "/sessions/customer/#{menu.id}", method: "post") do %>
+                 <input type="image" src = "../../plus-box.svg"/> </a>
+              </td>
+              </tr>
+             <% end %>
+
+      <% end %>
+      <% end %>
+
+
+
+
+  </table>
+  </center>

@@ -1,4 +1,4 @@
-<h1> Welcome to Cafe App </h1>
+ <h1 class= "Menu-ListTitle"> Welcome to Cafe App</h1>
 <% if @current_user %>
   <p class = "UserHeader">
     Welcome <%= @current_user.first_name %>!
@@ -8,7 +8,7 @@
 <%= link_to "Owner Home", "/sessions/owner", class: "Owner-menu" %>
 <%= link_to "Create Menu", "/menu", class: "Owner-menu" %>
 <%= link_to "Display Menu", "/menu/show", class: "Owner-menu" %>
-<%= link_to "Pending Orders", "/owner/show", class: "Owner-menu" %>
+<%= link_to "Pending Orders", "/owner/orderplaced", class: "Owner-menu" %>
  <%= link_to "Sign Out!", "/", class: "Owner-menu-title" %>
 <h1 class = "Owner-menu"> Welcome to Owner's page
 </h1>
