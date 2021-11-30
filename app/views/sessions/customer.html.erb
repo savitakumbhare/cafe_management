@@ -1,6 +1,6 @@
 
 <% if session[:current_user_id] %>
-<%= request.session_options[:id] %>
+
   <p class = "UserHeader">
     Welcome <%= session[:current_user_name] %>
     <%= link_to "Sign-out", destroy_session_path, method: "delete" %>  <%= link_to image_tag("/../../cart.svg"), "/order/custview" %>

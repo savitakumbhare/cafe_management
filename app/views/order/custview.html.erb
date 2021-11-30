@@ -18,11 +18,12 @@
 
 
 
-    <% Order.where(:user_id => session[:current_user_id]).each do |cartRow| %>
+    <% Order.where(:user_id => session[:current_user_id], :status => ["Pending", "Delivered"]).each do |cartRow| %>
       <%= render partial: "cart-section", locals: {
                    order_id: cartRow.id,
                    user_id: cartRow.user_id,
                    date: cartRow.created_at,
+                   status: cartRow.status,
                  } %>
     <% end %>
 </article>

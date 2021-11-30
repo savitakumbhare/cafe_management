@@ -13,6 +13,9 @@ class OrderController < ApplicationController
         menu_item_name: menu_item_name,
         menu_item_price: menu_item_price,
       )
+
+      odr = Order.find_by(id: id)
+      odr.update(status: "Pending")
     end
 
     redirect_to "/sessions/customer"

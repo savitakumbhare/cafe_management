@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       if user.role == "owner"
         redirect_to "/sessions/owner"
       else
-        Order.create(date: Date.today, user_id: user.id, status: "Pending")
+        Order.create(date: Date.today, user_id: user.id, sess_id: 1, status: "New")
         redirect_to "/sessions/customer"
       end
     else

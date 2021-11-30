@@ -3,7 +3,8 @@
 <table width="100%">
 
     <tr style="height:40px;color: #fff; background: #838a85;">
-    <td colspan="4" style="vertical-align: middle;"><p><b>Order No: <%= order_id %> </b> <br> Date: <%= date.strftime("%d-%m-%Y %T") %>  </p></td></tr>
+    <td colspan="4" style="vertical-align: middle;"><p><b>Order No: <%= order_id %> </b> <br> Date: <%= date.strftime("%d-%m-%Y %T") %>  </p>
+    <span>Status: <%= status %></span></td></tr>
     <% $total = 0 %>
      <% OrderItem.all.each do |oItem| %>
         <% if oItem.order_id == order_id %>
