@@ -15,7 +15,7 @@ class CafeController < ApplicationController
     )
     if user.save
       session[:current_user_id] = user.id
-      redirect_to "/"
+      redirect_to "/signin"
     else
       flash[:error] = user.errors.full_messages.join(" ,  ")
       redirect_to "/cafe/new"

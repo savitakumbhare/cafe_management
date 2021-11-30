@@ -6,7 +6,9 @@
 <% if session[:current_user_name] %>
   <p class = "UserHeader">
     This is your cart <%= session[:current_user_name] %>
-   <a href="http://localhost:3000/sessions/customer">Go to menu list</a>   <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
+
+   <%= link_to "Go to menu list", "/sessions/customer", class: "" %>
+   <%= link_to "Sign-out", destroy_session_path, method: "delete" %>
   </p>
 <% end %>
 

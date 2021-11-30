@@ -19,7 +19,12 @@ class OrderController < ApplicationController
   end
 
   def show
-    render "/order/custview"
+    current_user_id = session[:current_user_id]
+    if current_user_id
+      render "/order/custview"
+    else
+      redirect_to "/signin"
+    end
   end
 
   def delete

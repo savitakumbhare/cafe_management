@@ -1,10 +1,11 @@
 
-<% if session[:current_user_name] %>
+<% if session[:current_user_id] %>
+<%= request.session_options[:id] %>
   <p class = "UserHeader">
     Welcome <%= session[:current_user_name] %>
     <%= link_to "Sign-out", destroy_session_path, method: "delete" %>  <%= link_to image_tag("/../../cart.svg"), "/order/custview" %>
   </p>
-<% end %>
+
 
 <main>
 <article>
@@ -20,3 +21,11 @@
     <% end %>
 </article>
 </main>
+<% else %>
+
+
+<script type="text/javascript">
+    window.location.href="/signin"
+  </script>
+
+<% end %>
